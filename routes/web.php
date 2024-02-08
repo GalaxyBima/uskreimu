@@ -75,7 +75,7 @@ Route::post('/withdrawal', [BankController::class, 'withdrawal'])->name('withdra
     Route::post('/customer/tambahKeKeranjang/{id}', [TransaksiController::class, 'addToCart'])->name('addToCart');
     Route::delete('/customer/keranjang/destroy/{id}', [TransaksiController::class, 'keranjangDestroy'])->name('keranjang.destroy');
     Route::post('/customer/checkout', [TransaksiController::class, 'checkout'])->name('checkout');
-    // Route::get('/customer/transaksi/cetak', [TransaksiController::class, 'cetakTransaksi'])->name('cetak.transaksi');
+   Route::get('/customer/transaksi/cetak', [TransaksiController::class, 'cetakTransaksi'])->name('cetak.transaksi');
 
     // Riwayat transaksi
     Route::get('/customer/riwayat/transaksi', [TransaksiController::class, 'laporanTransaksiHarian'])->name('customer.riwayat.transaksi');
